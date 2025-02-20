@@ -1,23 +1,43 @@
-# 📌 Kubernetes Multi-Service Application 🚀  
+Guía para Desplegar una Aplicación en Kubernetes con Minikube
 
-Este proyecto es una aplicación multi-servicio que consta de:  
-- **Backend**: API REST creada con FastAPI.  
-- **Frontend**: Interfaz web en Node.js que consume el backend.  
+1. Introducción
 
-Ambos servicios están **containerizados** y desplegados en **Kubernetes** utilizando **Minikube**.  
+Esta guía explica cómo desplegar una aplicación con un backend en FastAPI y un frontend en Node.js en Kubernetes usando Minikube.
 
----
+2. Requisitos Previos
 
-## **📌 1. Requisitos Previos**  
-Asegúrate de tener instalados:  
-- [Docker](https://docs.docker.com/get-docker/)  
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/)  
-- [Kubectl](https://kubernetes.io/docs/tasks/tools/)  
-- [Git](https://git-scm.com/)  
+Docker
 
-Verifica las versiones con:  
-```sh
-docker --version
-minikube version
-kubectl version --client
-git --version
+Minikube
+
+Kubectl
+
+Git
+
+3. Configuración del Entorno
+
+Iniciar Minikube y verificar que el nodo esté activo.
+
+Configurar Docker para usar Minikube.
+
+4. Construcción y Despliegue de los Servicios
+
+Crear el backend con FastAPI y el frontend con Node.js.
+
+Containerizar ambos servicios con Docker.
+
+Crear archivos YAML para Kubernetes.
+
+Aplicar los despliegues y servicios con kubectl.
+
+5. Actualización con Rolling Update
+
+Modificar el backend y generar una nueva imagen.
+
+Actualizar el deployment en Kubernetes.
+
+Verificar que el cambio se haya aplicado sin interrupciones.
+
+6. Rollback (Opcional)
+
+Si hay errores en la nueva versión, revertir a la versión anterior con kubectl.
